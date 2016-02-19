@@ -1,0 +1,31 @@
+{
+    "name": "Auto add pending friends and status - Facebook by @vinigomescunha",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "This app to auto add the pending friends status and others",
+    "icons": {
+        "16": "im/icon-16.png",
+        "128": "im/icon-128.png"
+    },
+"content_scripts": [
+    {
+      "matches": ["http://www.facebook.com/*","https://www.facebook.com/*"],
+      "js": ["scripts/function.js"]
+    }
+  ],
+    "background": {
+        "scripts": [
+            "scripts/bg.js"
+        ]
+    },
+    "page_action": {
+        "default_icon": {
+            "19": "im/icon-19.png",
+            "38": "im/icon-38.png"
+        },
+        "default_title": "Auto add friends/status - FB"
+    },
+    "web_accessible_resources": [
+        "*"
+    ]
+}
